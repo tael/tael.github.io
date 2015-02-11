@@ -1,16 +1,18 @@
-<html>
-<head>
-    <title>tael.github.io</title>
-</head>
-<body>
-<h1>
-    Hi, this is tael.github.io
-</h1>
-<br>
+---
+layout: default
+description: "쉽게 읽을 수 있는 PHP의 베스트 프랙티스, 코딩 표준, 권위있는 튜토리얼로의 링크를 제공합니다."
+---
 
-<div>
-    <img src="https://avatars1.githubusercontent.com/u/1206713?v=3&s=460" style="width: 100px;">
-    <br>
+{% capture welcome_content %}{% include welcome.md %}{% endcapture %}
+{{ welcome_content|markdownify }}
+
+{% capture backtotop %}[Back to Top](#top){.top}{% endcapture %}
+{% for post in site.posts reversed %}
+{% if post.isChild != true and loop.first != true %}
+{{ backtotop|markdownify }}
+{% endif %}
+<div id="{{ post.anchor }}">
+    {{ post.content }}
 </div>
-</body>
-</html>
+{% endfor %}
+{{ backtotop|markdownify }}
