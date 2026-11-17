@@ -41,12 +41,14 @@
   .hero { padding: 96px 0 56px; }
   .hero .label { margin-bottom: 28px; }
   h1 {
-    font-size: clamp(44px, 9vw, 96px);
-    font-weight: 300;
-    letter-spacing: -0.03em;
-    line-height: 1.05;
-    margin: 0 0 28px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: clamp(64px, 13vw, 148px);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 0.92;
+    margin: 0 0 36px;
   }
+  .hero .kr { font-size: 15px; letter-spacing: 0.04em; color: var(--ink-45); margin: 0 0 14px; }
   .sub { font-size: 18px; color: var(--ink-70); margin: 0; max-width: 640px; }
 
   .meta {
@@ -63,6 +65,12 @@
   section > .label { display: block; color: var(--ink-45); margin-bottom: 22px; }
   p { margin: 0 0 26px; color: var(--ink-70); max-width: 640px; }
   p.lead { font-size: 24px; color: var(--ink); line-height: 1.6; letter-spacing: -0.01em; }
+
+  .dark { background: var(--ink); color: #f4f4f4; padding: 112px 0 96px; margin-top: 88px; }
+  .dark section { padding: 0; }
+  .dark section > .label { color: rgba(255, 255, 255, 0.5); }
+  .dark p { color: rgba(255, 255, 255, 0.72); }
+  .dark p.lead { color: #fff; }
 
   .group { border-top: 1px solid var(--line); padding: 22px 0 10px; display: grid; grid-template-columns: 180px 1fr; gap: 8px 32px; }
   .group h3 { margin: 0; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; padding-top: 6px; }
@@ -96,7 +104,8 @@
 <main class="wrap">
 
   <div class="hero">
-    <h1>김태일</h1>
+    <h1>Taeil<br>Kim</h1>
+    <p class="kr">김태일</p>
     <p class="sub">백엔드 엔지니어로 시작해 엔지니어링 조직을 이끌었고, 지금은 데이터 파이프라인을 AI 에이전트와 함께 운영하는 엔지니어입니다.</p>
   </div>
 
@@ -104,6 +113,10 @@
     <span>Backend</span><span>Data</span><span>Engineering Management</span><span>Lead Engineer</span>
   </div>
 
+</main>
+
+<div class="dark">
+  <div class="wrap">
   <section>
     <span class="label">How I Work</span>
     <p class="lead">무슨 일이 일어나는지 먼저 확인하고, 큰 문제는 작게 나눠 자주 일어나는 것부터 줄이는 방식으로 일해 왔습니다.</p>
@@ -113,6 +126,10 @@
     <p>사람이 같은 일을 계속하고 있으면 코드로 옮기거나, 그 일이 생기지 않게 설계를 바꿉니다. 요즘은 운영 업무 일부를 AI 에이전트에게 맡기고, 어디까지 맡길지 정하는 일을 직접 하고 있습니다.</p>
     <p>팀 규칙은 단순하게 두고, 합의하면 바꿉니다. 문서와 구성도는 코드를 고칠 때 같이 고치고, 기술부채는 따로 목표를 잡아 주기적으로 정리합니다. 작은 불편도 그냥 넘기지 않고 말하는 편이고, 팀원이 말하는 불편은 과제로 적어 둡니다.</p>
   </section>
+  </div>
+</div>
+
+<main class="wrap">
 
   <section>
     <span class="label">What I Do</span>
