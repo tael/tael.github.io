@@ -72,6 +72,8 @@
   .dark p { color: rgba(255, 255, 255, 0.72); }
   .dark p.lead { color: #fff; }
 
+  .split { display: grid; grid-template-columns: 180px 1fr; gap: 0 32px; }
+  .split > .label { padding-top: 12px; }
   .group { border-top: 1px solid var(--line); padding: 22px 0 10px; display: grid; grid-template-columns: 180px 1fr; gap: 8px 32px; }
   .group h3 { margin: 0; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; padding-top: 6px; }
   .group ul { margin: 0; padding: 0; list-style: none; }
@@ -88,7 +90,8 @@
   @media (max-width: 640px) {
     .wrap { padding: 0 20px; }
     .hero { padding: 64px 0 40px; }
-    .group { grid-template-columns: 1fr; }
+    .group, .split { grid-template-columns: 1fr; }
+    .split > .label { padding-top: 0; }
     .meta span + span::before { display: none; }
     .meta { gap: 6px 18px; }
     p.lead { font-size: 21px; }
@@ -118,14 +121,16 @@
 
 <div class="dark">
   <div class="wrap">
-  <section>
+  <section class="split">
     <span class="label">How I Work</span>
+    <div>
     <p class="lead">관측 가능성을 먼저 확보하고, 문제를 분해해 발생 빈도가 높은 것부터 제거해 왔습니다.</p>
     <p>신규 시스템을 맡으면 기능 개발보다 로깅, 메트릭, 에러 트래킹을 먼저 구축합니다. 장애 원인을 특정할 수 없으면 우선순위도 정할 수 없습니다.</p>
     <p>막연한 문제 제기는 배경, 목표, 기대효과를 정의한 과제로 전환해 우선순위를 정합니다. 팀 목표도 지표와 실행 과제 단위까지 분해합니다.</p>
     <p>"어렵다"는 대부분 "처음이다"라는 뜻입니다. 문서와 예제로 진입 장벽을 낮추는 데 시간을 투자합니다.</p>
     <p>반복되는 수작업은 자동화하거나 설계 변경으로 발생 자체를 없앱니다.</p>
     <p>팀 규칙은 최소한으로 유지하고 합의를 거쳐 개정합니다. 문서와 아키텍처 다이어그램은 코드 변경과 함께 갱신하고, 기술부채는 별도 목표로 관리합니다. 팀원이 제기한 불편 사항은 백로그에 등록합니다.</p>
+    </div>
   </section>
   </div>
 </div>
@@ -200,9 +205,9 @@
     </div>
   </section>
 
-  <section>
+  <section class="split">
     <span class="label">Interests</span>
-    <p>AI 에이전트에 운영 업무를 위임할 때의 권한과 비용 설계, 현업이 바로 활용할 수 있는 데이터 제공, 사람과 에이전트가 함께 일하는 개발 조직 운영에 관심이 있습니다.</p>
+    <div><p>AI 에이전트에 운영 업무를 위임할 때의 권한과 비용 설계, 현업이 바로 활용할 수 있는 데이터 제공, 사람과 에이전트가 함께 일하는 개발 조직 운영에 관심이 있습니다.</p></div>
   </section>
 
 </main>
