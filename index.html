@@ -77,6 +77,8 @@
   .group ul { margin: 0; padding: 0; list-style: none; }
   .group li { color: var(--ink-70); margin-bottom: 14px; }
   .group p { margin: 0 0 12px; }
+  .proj h3 { text-transform: none; letter-spacing: 0.02em; font-size: 14px; padding-top: 3px; }
+  .plinks { font-size: 13px; letter-spacing: 0.04em; }
 
 
   footer { margin-top: 96px; border-top: 1px solid var(--line); padding: 28px 0 64px; }
@@ -87,7 +89,7 @@
     .wrap { padding: 0 20px; }
     .hero { padding: 64px 0 40px; }
     .group { grid-template-columns: 1fr; }
-      .meta span + span::before { display: none; }
+    .meta span + span::before { display: none; }
     .meta { gap: 6px 18px; }
     p.lead { font-size: 21px; }
   }
@@ -159,6 +161,18 @@
   </section>
 
   <section>
+    <span class="label">Projects</span>
+    <div class="group proj">
+      <h3>korean-clarity</h3>
+      <p>AI가 쓴 듯한 한국어를 검출하는 룰 기반 분석기와 웹 도구. TypeScript, Astro.<br><span class="plinks"><a href="https://tael.github.io/korean-clarity/">Web</a> · <a href="https://github.com/tael/korean-clarity">GitHub</a></span></p>
+    </div>
+    <div class="group proj">
+      <h3>slack-cli-agent</h3>
+      <p>Claude Code, Codex, Gemini CLI를 슬랙 봇으로 연결하는 어댑터. 엔진 fallback, 채널별 모델·권한 설정. Python.<br><span class="plinks"><a href="https://github.com/tael/slack-cli-agent">GitHub</a></span></p>
+    </div>
+  </section>
+
+  <section>
     <span class="label">Stack</span>
     <div class="group">
       <h3>Data</h3>
@@ -166,7 +180,7 @@
     </div>
     <div class="group">
       <h3>Backend</h3>
-      <p>Java, Spring, JPA, MySQL, PostgreSQL, Redis</p>
+      <p>Java, Spring, JPA, Python, TypeScript, MySQL, PostgreSQL, Redis</p>
     </div>
     <div class="group">
       <h3>Infra</h3>
